@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marathon Registrierung!</title>
+</head>
+<body>
+
+<h1>Marathon Registrierung!</h1>
+
+<form action="/loginmarathon">
+    <div>
+        <label for="vname">Vorname</label>
+        <input id="vname" type="text" name="vorname" placeholder="Vorname" required>
+        <label for="nname">Nachname</label>
+        <input id="nname" type="text" name="nachname" placeholder="Nachname" required>
+    </div>
+    <div>
+        <p>Wähle die Distanz:</p>
+        <input type="radio" name="distance" required>Spaßlauf
+        <br><input type="radio" name="distance">Halbmarathon
+        <br><input type="radio" name="distance">Marathon
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="E-Mail" required>
+        <label for="pw">Passwort</label>
+        <input id="pw" type="password" name="passwort" placeholder="Passwort" required minlength="13"><br>
+        <label for="age">Wähle dein Alter</label>
+        <select id="age" name="altergrenze">
+            <option>Unter 18</option>
+            <option>Über 18</option>
+            <option>Über 50</option>
+        </select>
+    </div>
+<button type="submit" name="registrieren">Registrieren!</button>
+</form>
+
+</body>
+
+</html>

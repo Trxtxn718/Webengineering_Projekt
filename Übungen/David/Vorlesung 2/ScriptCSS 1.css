@@ -1,0 +1,27 @@
+.Zero {
+    color: green;
+}
+
+h2 {
+    color: purple;
+}
+
+p {
+    background-color: black;
+    color: white;
+}
+
+button {
+    color: red;
+    background-color: pink;
+}
+
+.Eins {
+    font-family: monospace;
+    text-align: center;
+    font-weight: 100;
+    font-size: 40px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
