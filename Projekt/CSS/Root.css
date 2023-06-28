@@ -1,0 +1,30 @@
+
+.progressboard {
+    border: 1px solid black;
+}
+
+.shell {
+    border: 1px solid black;
+    margin: 100px;
+    height: 10px;
+}
+
+.progressbar {
+    background-color: black;
+    width: 10%;
+    text-align: center;
+    height: 10px;
+}
+
+.circle{
+    width: 30px;
+}
+
+
+.questionfield {
+    border: 1px solid black;
+}
+
+.tempoption {
+    border: 1px solid black;
+}
