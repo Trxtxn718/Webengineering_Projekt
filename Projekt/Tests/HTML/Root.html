@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="stylesheet" href="../CSS/Root.css">
+    <script src="../JS/Root.js"></script>
+</head>
+
+<body onload="fetchstuff()">
+
+    <div id="options">
+        <div class="tempoption">
+            <h1>Options</h1>
+
+            <label for="amount">Amount of Questions</label>
+            <input id="amount" type="number" min="1" max="25" value="1">
+            <label for="category">Category</label>
+            <select id="category">
+                <option>Any Category</option>
+            </select>
+
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+                <option>Any Difficulty</option>
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+            </select>
+            <br>
+          <button onclick="startgame()">Start game!</button>  
+        </div>
+    </div>
+
+
+    <div id="gamescreen">
+        <div class="progressboard">
+            <div class="shell" id="firstshell">
+                <div class="progressbar" id="firstbar">
+                    <span><img src="../Assets/Circle.png" class="circle"></span>
+                </div>
+            </div>
+        </div>
+        <div class="questionfield">
+            
+            <h3 id="question">Temp</h3>
+            <button id="answerone"></button>
+            <button id="answertwo"></button>
+            <button id="answerthree"></button>
+            <button id="answerfour"></button>
+            <p id="temp"></p>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
