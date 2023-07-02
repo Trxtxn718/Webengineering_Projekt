@@ -57,7 +57,8 @@ async function genquestion(){
         rngC = 3;
         rngD = 0;
     }
-
+    const temp = document.getElementById("temp");
+    temp.innerHTML = "";
     const buttonone = document.getElementById("answerone");
     buttonone.innerHTML = answers[rngA];
     if (rngA == 0) {buttonone.addEventListener("click", correctAnswer);}
