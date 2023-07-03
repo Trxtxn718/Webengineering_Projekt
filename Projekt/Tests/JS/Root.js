@@ -125,6 +125,9 @@ function correctAnswer() {
         asignquestion(questionindex);
         console.log(json.results.length);
     }
+    else{
+        
+    }
     const temp = document.getElementById("temp");
     temp.innerHTML = "Correct Answer";
 
@@ -162,6 +165,9 @@ function wrongAnswer() {
         questionindex++;
         asignquestion(questionindex);
         console.log(json.results.length);
+    }
+    else{
+
     }
     const temp = document.getElementById("temp");
     temp.innerHTML = "Wrong Answer";
