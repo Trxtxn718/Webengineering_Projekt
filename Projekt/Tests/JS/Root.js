@@ -158,6 +158,11 @@ function correctAnswer() {
 }
 
 function wrongAnswer() {
+    if (questionindex < json.results.length-1) {
+        questionindex++;
+        asignquestion(questionindex);
+        console.log(json.results.length);
+    }
     const temp = document.getElementById("temp");
     temp.innerHTML = "Wrong Answer";
 }
