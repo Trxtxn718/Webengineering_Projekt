@@ -129,8 +129,9 @@ function correctAnswer() {
         
     }
     const temp = document.getElementById("temp");
+    temp.innerHTML =""
     temp.innerHTML = "Correct Answer";
-
+    console.log("Correct")
     let widthfirstbar = document.getElementById("firstbar");
     let style = getComputedStyle(widthfirstbar);
     let width = style.width;
@@ -170,6 +171,7 @@ function wrongAnswer() {
 
     }
     const temp = document.getElementById("temp");
+    temp.innerHTML =""
     temp.innerHTML = "Wrong Answer";
 }
 

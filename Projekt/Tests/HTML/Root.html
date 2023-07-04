@@ -17,26 +17,26 @@
             <h1>Options</h1>
 
             <label for="amount">Amount of Questions</label>
-            <input id="amount" type="number" min="1" max="25" value="1">
+            <input id="amount" type="number" min="1" max="25" value="1" class="select">
             <label for="category">Category</label>
-            <select id="category">
+            <select id="category" class="select">
                 <option>Any Category</option>
             </select>
 
             <label for="difficulty">Difficulty</label>
-            <select id="difficulty">
+            <select id="difficulty" class="select">
                 <option>Any Difficulty</option>
                 <option>Easy</option>
                 <option>Medium</option>
                 <option>Hard</option>
             </select>
             <br>
-          <button onclick="startgame()">Start game!</button>  
+          <button onclick="startgame()" class="button startbutton">Start game!</button>  
         </div>
     </div>
 
 
-    <div id="gamescreen">
+    <div id="gamescreen" class="gamescreen">
         <div class="progressboard">
             <div class="shell" id="firstshell">
                 <div class="progressbar" id="firstbar">
@@ -47,11 +47,11 @@
         <div class="questionfield">
             
             <h3 id="question">Temp</h3>
-            <button id="answerone"></button>
-            <button id="answertwo"></button>
-            <button id="answerthree"></button>
-            <button id="answerfour"></button>
-            <p id="temp"></p>
+            <button id="answerone" class="button"></button>
+            <button id="answertwo" class="button"></button>
+            <button id="answerthree" class="button"></button>
+            <button id="answerfour" class="button"></button>
+            <p id="temp" class="indicator"></p>
 
 
         </div>

@@ -1,19 +1,29 @@
+body {
+    background-color: rgb(211, 211, 211);
+    background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/10/23/57899/question-mark-01.jpg");
 
-.progressboard {
-    border: 1px solid black;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    
 }
 
 .shell {
     border: 1px solid black;
-    margin: 100px;
-    height: 10px;
+    margin: 2rem;
+    height: 50px;
+
 }
 
 .progressbar {
-    background-color: black;
-    width: 10%;
+    background-color: darkgreen;
+    width: 0%;
     text-align: center;
-    height: 10px;
+    height: 100%;
 }
 
 .circle{
@@ -22,9 +32,56 @@
 
 
 .questionfield {
-    border: 1px solid black;
+    font-size: large;
+    
 }
 
 .tempoption {
     border: 1px solid black;
+    border-radius: 10%;
+    margin: 1rem;
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif;
+    padding: 1rem;
+    background-color: rgba(245, 255, 253, 0.377);
+    
+}
+
+.button {
+    margin: 1rem;
+    padding: 1%;
+    color: black;
+    background-color: gainsboro;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 25%;
+}
+
+.startbutton {
+    background-color: darkgray;
+    color: darkred;
+}
+
+.gamescreen {
+    border: 1px solid black;
+    border-radius: 10%;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(245, 255, 253, 0.377);
+}
+
+.select {
+    font-size: large;
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgb(231, 231, 231);
+}
+
+
+.indicator {
+    font-size: larger;
+    font-weight: 800;
+}
+
+.amount{
+    
 }
