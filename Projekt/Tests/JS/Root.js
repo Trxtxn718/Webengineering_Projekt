@@ -16,8 +16,10 @@ async function fetchstuff() {
             select.appendChild(option);
         }
     }
-
-
+    const gamescreen = document.getElementById("gamescreen");
+    const winscreen = document.getElementById("winscreen");
+    gamescreen.style.display = "none";
+    winscreen.style.display = "none";
 }
 
 
@@ -29,10 +31,13 @@ async function startgame() {
     const catlist = JSON.parse(categorylist);
     const selectcat = document.getElementById("category");
     const selectdiff = document.getElementById("difficulty");
-    const amount = document.getElementById("amount").value;
+    const amountelem = document.getElementById("amount");
+    let amount = amountelem.value;
+    if (amount > 25) {amount = 25;}
     const diff = selectdiff.value;
     const selectedindexdiff = selectdiff.selectedIndex;
     const selectedoptionindex = selectcat.selectedIndex;
+    const gamescreen = document.getElementById("gamescreen");
     if (selectedoptionindex >= 1) {
         const category = catlist[selectedoptionindex-1].id;
         if (selectedindexdiff >= 1) {
@@ -52,7 +57,7 @@ async function startgame() {
         }
     }
     console.log(json);
-
+    gamescreen.style.display = "block";
     asignquestion(questionindex);
 }
 
@@ -117,21 +122,45 @@ function asignquestion(index) {
 
 }
 
-
+var counter = 0;
 var a = 0;
 function correctAnswer() {
+    const questionfield = document.getElementById("questionfield");
+    const winscreen = document.getElementById("winscreen");
+    const congrats = document.getElementById("congratulation");
+    const amount = document.getElementById("amount").value;
     if (questionindex < json.results.length-1) {
         questionindex++;
         asignquestion(questionindex);
         console.log(json.results.length);
+        counter++;
     }
     else{
-        
+        counter++;
+        questionfield.style.display = "none";
+        if (100/counter>90){
+            console.log(100/counter);
+            congrats.innerHTML = "You have done very well congratulations!";
+        } else if (100/counter>80){
+            console.log(100/counter);
+            congrats.innerHTML = "You have done very good!";
+        } else {
+            console.log(100/counter);
+            congrats.innerHTML = "You have done quite well, but you can do better!";
+        }
+        winscreen.style.display = "block";
     }
+    const correct = document.getElementById("correct");
+    const questionamount = document.getElementById("questionamount");
     const temp = document.getElementById("temp");
+    console.log(amount);
     temp.innerHTML =""
     temp.innerHTML = "Correct Answer";
-    console.log("Correct")
+    console.log("Correct");
+    correct.innerHTML = counter;
+    questionamount.innerHTML = amount;
+    correct.style.color = "green";
+    questionamount.style.color = "red";
     let widthfirstbar = document.getElementById("firstbar");
     let style = getComputedStyle(widthfirstbar);
     let width = style.width;
@@ -141,8 +170,9 @@ function correctAnswer() {
     let value = maxwidth / parseFloat(width);
     let currentwidth = 100 / value;
     let newwidth = Math.round(currentwidth);
+    let widthaddvalue = 100 / amount;
     if (Math.floor(newwidth) < 100) {
-        newwidth = Math.round(currentwidth) + 10;
+        newwidth = Math.round(currentwidth) + widthaddvalue;
     }
     const firstbar = document.getElementById("firstbar");
     if (a == 0) {
@@ -162,14 +192,35 @@ function correctAnswer() {
 }
 
 function wrongAnswer() {
+    const questionfield = document.getElementById("questionfield");
+    const winscreen = document.getElementById("winscreen");
+    const congrats = document.getElementById("congratulation");
+    const amount = document.getElementById("amount").value;
     if (questionindex < json.results.length-1) {
         questionindex++;
         asignquestion(questionindex);
         console.log(json.results.length);
     }
     else{
-
+        questionfield.style.display = "none";
+        if (100/counter>90){
+            console.log(100/counter);
+            congrats.innerHTML = "You have done very well congratulations!";
+        } else if (100/counter>80){
+            console.log(100/counter);
+            congrats.innerHTML = "You have done very good!";
+        } else {
+            console.log(100/counter);
+            congrats.innerHTML = "You have done quite well, but you can do better!";
+        }
+        winscreen.style.display = "block";
     }
+    const correct = document.getElementById("correct");
+    const questionamount = document.getElementById("questionamount");
+    correct.innerHTML = counter;
+    questionamount.innerHTML = amount;
+    correct.style.color = "green";
+    questionamount.style.color = "red";
     const temp = document.getElementById("temp");
     temp.innerHTML =""
     temp.innerHTML = "Wrong Answer";
