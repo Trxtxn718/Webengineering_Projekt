@@ -42,12 +42,12 @@ body {
     font-family: 'berlin sans fb';
     padding: 1rem;
     background-color: rgba(245, 255, 253, 0.377);
-    
+    text-align: center;
 }
 
 .button {
-    margin: 1rem;
-    padding: 1%;
+    margin: 10px;
+    padding: 10px;
     color: black;
     background-color: rgb(184, 183, 183);
     font-size: large;
@@ -66,6 +66,7 @@ body {
     align-items: center;
     text-align: center;
     background-color: rgba(245, 255, 253, 0.377);
+    margin: 5%;
 }
 
 .select {
@@ -90,4 +91,14 @@ body {
 
 #difficulty{
     border-radius: 25px;
+}
+
+
+.winscreen {
+    border: 1px solid black;
+    border-radius: 25px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(245, 255, 253, 0.377);
+    margin: 5%;
 }
