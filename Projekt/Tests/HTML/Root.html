@@ -18,10 +18,11 @@
 
             <label for="amount">Amount of Questions</label>
             <input id="amount" type="number" min="1" max="25" value="1" class="select">
+            <br>
             <label for="category">Category</label>
             <select id="category" class="select">
                 <option>Any Category</option>
-            </select>
+            </select><br>
 
             <label for="difficulty">Difficulty</label>
             <select id="difficulty" class="select">
@@ -44,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="questionfield">
+        <div class="questionfield" id="questionfield">
             
             <h3 id="question">Temp</h3>
             <button id="answerone" class="button"></button>
@@ -57,7 +58,10 @@
         </div>
     </div>
 
-
+    <div class="winscreen" id="winscreen">
+        <h1 id="evaluation" class="evaluation">You answered<span> </span><span id="correct"></span><span> </span>out of<span> </span><span id="questionamount"></span><span> </span>correctly!</h1>
+        <h2 id="congratulation" class="congratulation"></h2>
+    </div>
 
 
 
